@@ -186,6 +186,11 @@ section {
 }
 
 /*ADAPTIVE*/
+@media (min-width: 375px) {
+  .footer {
+    background-size: 100%;
+  }
+}
 @media (min-width: 414px) {
   .container {
     max-width: 334px;
@@ -207,6 +212,10 @@ section {
     width: 255px;
     height: 220px;
   }
+
+  .footer {
+    background-position-y: -85px;
+  }
 }
 @media (min-width: 568px) {
   .container {
@@ -225,6 +234,9 @@ section {
     width: 250px;
   }
 
+  .footer {
+    background-position-y: -125px;
+  }
   .footer__img {
     display: block;
     width: 237px;
