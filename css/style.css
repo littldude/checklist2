@@ -1,15 +1,13 @@
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -58,7 +56,7 @@ section {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 30px;
   color: #000000;
 }
 .text-how {
@@ -119,8 +117,6 @@ section {
 }
 .more__link:hover {
   opacity: 0.7;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
@@ -133,8 +129,6 @@ section {
 }
 .footer__inner {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .footer__img {
@@ -150,13 +144,8 @@ section {
   position: absolute;
   right: 0;
   top: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .footer__text--item {
   font-family: "ProximaNova";
@@ -168,12 +157,8 @@ section {
 }
 .footer__link {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .footer__link--img {
   display: block;
@@ -198,8 +183,6 @@ section {
 }
 .footer__link--link:hover {
   opacity: 0.7;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
@@ -314,8 +297,6 @@ section {
   }
   .more__link:hover {
     opacity: 0.7;
-    -webkit-transition: 0.2s linear;
-    -o-transition: 0.2s linear;
     transition: 0.2s linear;
   }
 
@@ -335,25 +316,16 @@ section {
     position: absolute;
     right: 0;
     top: 45px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .footer__text--item {
     font-size: 24px;
   }
   .footer__link {
     margin-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .footer__link--img {
     display: block;
