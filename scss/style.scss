@@ -1,4 +1,9 @@
 *,
+::after ,
+::before {
+    box-sizing: border-box;
+}
+*,
 ::after,
 ::before {
     box-sizing: border-box;
@@ -35,11 +40,7 @@ section {
     color: #181818;
     &-intro {
         font-size: 18px;
-        padding: 25px 120px 25px 0;
-    }
-    &-how {
-        font-size: 18px;
-        padding: 25px 60px 25px 0;
+        padding: 25px 40px 25px 0;
     }
     &-more {
         font-size: 16px;
@@ -51,34 +52,45 @@ section {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    color: #5E5E5E;
+    color: #000000;
     &-how {
         padding: 0 15px;
+        margin-bottom: 20px;
     }
     &-more {
-        padding: 20px 15px 0 0;
+        padding: 25px 15px 0 15px;
+    }
+    .black {
+        font-weight: 900;
+        color: #000000;
     }
 }
 
 .how {
     position: relative;
+    padding-top: 30px;
     &__art {
         position: absolute;
         right: 0;
-        top: -70px;
+        top: 32%;
     }
     &__inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &--item {
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            &__img {
+        background-color: #fff;
+        &--img {
+            display: block;
+            margin: 0 auto;padding: 25px 0 35px 0;
+            width: 216px;
+            height: 175px;
+            svg {
                 display: block;
-                width: 44px;
-                height: 39px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--text {
+            &__item {
+                padding: 0 15px;
+                margin-bottom: 20px;
             }
         }
     }
@@ -168,7 +180,73 @@ section {
     }
 }
 /*ADAPTIVE*/
-@media (max-width:812px) {
+
+@media(min-width: 414px) {
+    .container {
+        max-width: 334px;
+    }
+    .title {
+        &-intro {
+            font-size: 19px;
+            padding: 25px 30px 25px 0;
+        }
+    }
+    .text {
+        font-size: 14px;
+    }
+    .how {
+        &__inner {
+            background-color: #fff;
+            &--img {
+                width: 255px;
+                height: 220px;
+            }
+        }
+    }
+}
+@media(min-width: 568px) {
+    .container {
+        max-width: 408px;
+    }
+    .title {
+        &-intro {
+            font-size: 20px;
+        }
+    }
+    .text {
+        font-size: 15px;
+    }
+    .more {
+        &__link {
+            width: 250px;
+        }
+    }
+    .footer {
+        &__img {
+            display: block;
+            width: 237px;
+            height: 315px;  
+
+        }
+        &__text {
+            &--item {
+                font-size: 19px;
+            }
+        }
+        &__link {
+            &--img {
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+            &--link {
+                font-size: 18px;
+                color: #000000;
+            }
+        }
+    }
+}
+@media (min-width:667px) {
     .container {
         max-width: 500px;
     }
@@ -252,158 +330,6 @@ section {
         }
     }
 }
-@media (max-width:568px) {
-    .container {
-        max-width: 400px;
-    }
-    
-    
-}
-@media (max-width:414px) {
-    .container {
-        max-width: 354px;
-    }
-    .text {
-        font-size: 16px;
-    }
-    .more {
-        &__link {
-            width: 200px;
-            padding: 17px 0px;
-            font-size: 17px;
-        }
-    }
-    .footer {
-        &__img {
-            display: block;
-            width: 217px;
-            height: 295px;  
-        }
-        &__text {
-            position: absolute;
-            right: 0;
-            top: 45px;
-            display: flex;
-            flex-direction: column;
-            &--item {
-                font-size: 20px;
-            }
-        }
-        &__link {
-            &--img {
-                display: block;
-                width: 20px;
-                height: 20px;
-            }
-            &--link {
-                font-size: 19px;
-            }
-        }
-    }
-    
-}
-@media(max-width:375px) {
-    .container {
-        max-width: 300px;
-    }
-    .title {
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 900;
-        line-height: 25px;
-        color: #181818;
-        &-intro {
-            font-size: 18px;
-            padding: 25px 120px 25px 0;
-        }
-        &-how {
-            font-size: 18px;
-            padding: 25px 60px 25px 0;
-        }
-        &-more {
-            font-size: 16px;
-        }
-    }
-    .text {
-        font-family: 'ProximaNova';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 19px;
-        color: #5E5E5E;
-        &-how {
-            padding: 0 15px;
-        }
-        &-more {
-            padding: 20px 15px 0 0;
-        }
-    }
-    .footer {
-        padding-top: 30px;
-        background-image: url('../img/white_line.svg');
-        background-position-y: -10px;
-        background-repeat: no-repeat;
-        &__inner {
-            position: relative;
-            display: flex;
-        }
-        &__img {
-            display: block;
-            width: 217px;
-            height: 295px;  
-            &--dots {
-                position: absolute;
-                top: 125px;
-            }
-        }
-        &__text {
-            position: absolute;
-            right: 0;
-            top: 45px;
-            display: flex;
-            flex-direction: column;
-            &--item {
-                font-family: 'ProximaNova';
-                font-style: normal;
-                font-weight: 900;
-                font-size: 15px;
-                line-height: 20px;
-                color: #000000;
-            }
-        }
-        &__link {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            &--img {
-                display: block;
-                width: 20px;
-                height: 20px;
-                svg {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            &--link {
-                padding-left: 8px;
-                font-family: 'ProximaNova';
-                font-style: normal;
-                font-weight: 900;
-                font-size: 14px;
-                line-height: 20px;
-                text-decoration-line: underline;
-                color: #000000;
-                &:hover {
-                    opacity: .7;
-                    transition: .2s linear;
-                }
-            }
-        }
-    }
-    
-}
-
 
 /*FONTS*/
 @font-face {

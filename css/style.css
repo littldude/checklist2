@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -39,11 +45,7 @@ section {
 }
 .title-intro {
   font-size: 18px;
-  padding: 25px 120px 25px 0;
-}
-.title-how {
-  font-size: 18px;
-  padding: 25px 60px 25px 0;
+  padding: 25px 40px 25px 0;
 }
 .title-more {
   font-size: 16px;
@@ -55,37 +57,47 @@ section {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  color: #5E5E5E;
+  color: #000000;
 }
 .text-how {
   padding: 0 15px;
+  margin-bottom: 20px;
 }
 .text-more {
-  padding: 20px 15px 0 0;
+  padding: 25px 15px 0 15px;
+}
+.text .black {
+  font-weight: 900;
+  color: #000000;
 }
 
 .how {
   position: relative;
+  padding-top: 30px;
 }
 .how__art {
   position: absolute;
   right: 0;
-  top: -70px;
+  top: 32%;
 }
 .how__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #fff;
 }
-.how__inner--item {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-}
-.how__inner--item__img {
+.how__inner--img {
   display: block;
-  width: 44px;
-  height: 39px;
+  margin: 0 auto;
+  padding: 25px 0 35px 0;
+  width: 216px;
+  height: 175px;
+}
+.how__inner--img svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.how__inner--text__item {
+  padding: 0 15px;
+  margin-bottom: 20px;
 }
 
 .more__link {
@@ -174,7 +186,64 @@ section {
 }
 
 /*ADAPTIVE*/
-@media (max-width: 812px) {
+@media (min-width: 414px) {
+  .container {
+    max-width: 334px;
+  }
+
+  .title-intro {
+    font-size: 19px;
+    padding: 25px 30px 25px 0;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .how__inner {
+    background-color: #fff;
+  }
+  .how__inner--img {
+    width: 255px;
+    height: 220px;
+  }
+}
+@media (min-width: 568px) {
+  .container {
+    max-width: 408px;
+  }
+
+  .title-intro {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .more__link {
+    width: 250px;
+  }
+
+  .footer__img {
+    display: block;
+    width: 237px;
+    height: 315px;
+  }
+  .footer__text--item {
+    font-size: 19px;
+  }
+  .footer__link--img {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  .footer__link--link {
+    font-size: 18px;
+    color: #000000;
+  }
+}
+@media (min-width: 667px) {
   .container {
     max-width: 500px;
   }
@@ -252,154 +321,6 @@ section {
   }
   .footer__link--link {
     font-size: 19px;
-  }
-}
-@media (max-width: 568px) {
-  .container {
-    max-width: 400px;
-  }
-}
-@media (max-width: 414px) {
-  .container {
-    max-width: 354px;
-  }
-
-  .text {
-    font-size: 16px;
-  }
-
-  .more__link {
-    width: 200px;
-    padding: 17px 0px;
-    font-size: 17px;
-  }
-
-  .footer__img {
-    display: block;
-    width: 217px;
-    height: 295px;
-  }
-  .footer__text {
-    position: absolute;
-    right: 0;
-    top: 45px;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__text--item {
-    font-size: 20px;
-  }
-  .footer__link--img {
-    display: block;
-    width: 20px;
-    height: 20px;
-  }
-  .footer__link--link {
-    font-size: 19px;
-  }
-}
-@media (max-width: 375px) {
-  .container {
-    max-width: 300px;
-  }
-
-  .title {
-    font-family: "Arial";
-    font-style: normal;
-    font-weight: 900;
-    line-height: 25px;
-    color: #181818;
-  }
-  .title-intro {
-    font-size: 18px;
-    padding: 25px 120px 25px 0;
-  }
-  .title-how {
-    font-size: 18px;
-    padding: 25px 60px 25px 0;
-  }
-  .title-more {
-    font-size: 16px;
-  }
-
-  .text {
-    font-family: "ProximaNova";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 19px;
-    color: #5E5E5E;
-  }
-  .text-how {
-    padding: 0 15px;
-  }
-  .text-more {
-    padding: 20px 15px 0 0;
-  }
-
-  .footer {
-    padding-top: 30px;
-    background-image: url("../img/white_line.svg");
-    background-position-y: -10px;
-    background-repeat: no-repeat;
-  }
-  .footer__inner {
-    position: relative;
-    display: flex;
-  }
-  .footer__img {
-    display: block;
-    width: 217px;
-    height: 295px;
-  }
-  .footer__img--dots {
-    position: absolute;
-    top: 125px;
-  }
-  .footer__text {
-    position: absolute;
-    right: 0;
-    top: 45px;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__text--item {
-    font-family: "ProximaNova";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 15px;
-    line-height: 20px;
-    color: #000000;
-  }
-  .footer__link {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-  }
-  .footer__link--img {
-    display: block;
-    width: 20px;
-    height: 20px;
-  }
-  .footer__link--img svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .footer__link--link {
-    padding-left: 8px;
-    font-family: "ProximaNova";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 14px;
-    line-height: 20px;
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-    color: #000000;
-  }
-  .footer__link--link:hover {
-    opacity: 0.7;
-    transition: 0.2s linear;
   }
 }
 /*FONTS*/
